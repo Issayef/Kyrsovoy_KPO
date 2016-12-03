@@ -1,0 +1,60 @@
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\obj\Debug\Курсач.CustomerForm.resources
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\obj\Debug\Курсач.MainForm.resources
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\obj\Debug\Курсач.LoginForm.resources
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\bin\Debug\Курсач.exe
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\bin\Debug\Курсач.pdb
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\obj\Debug\Курсач.exe
+C:\Users\noize\Desktop\Курсач по конструированию ПО\Курсач\Курсач\obj\Debug\Курсач.pdb
+C:\Users\Никита\Desktop\Курсач\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.exe
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.pdb
+C:\Users\Никита\Desktop\Курсач\Курсач\bin\Debug\Курсач.exe
+C:\Users\Никита\Desktop\Курсач\Курсач\bin\Debug\Курсач.pdb
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.CustomerForm.resources
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.MainForm.resources
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.LoginForm.resources
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.EnterDataForm.resources
+C:\Users\Никита\Desktop\Курсач\Курсач\obj\Debug\Курсач.MakeDealForm.resources
+D:\Курсач\Курсач\bin\Debug\Курсач.exe.config
+D:\Курсач\Курсач\obj\Debug\Курсач.exe
+D:\Курсач\Курсач\obj\Debug\Курсач.pdb
+E:\Курсач\Курсач\bin\Debug\Курсач.exe.config
+E:\Курсач\Курсач\obj\Debug\Курсач.exe
+E:\Курсач\Курсач\obj\Debug\Курсач.pdb
+E:\Курсач\Курсач\bin\Debug\Курсач.exe
+E:\Курсач\Курсач\bin\Debug\Курсач.pdb
+E:\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
+E:\Курсач\Курсач\obj\Debug\Курсач.CustomerForm.resources
+E:\Курсач\Курсач\obj\Debug\Курсач.EnterDataForm.resources
+E:\Курсач\Курсач\obj\Debug\Курсач.MainForm.resources
+E:\Курсач\Курсач\obj\Debug\Курсач.LoginForm.resources
+E:\Курсач\Курсач\obj\Debug\Курсач.MakeDealForm.resources
+E:\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
+E:\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
+E:\Курсач\Курсач\obj\Debug\Курсач.BossForm.resources
+C:\Users\днс\Downloads\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\днс\Downloads\Курсач\Курсач\Курсач\obj\Debug\Курсач.exe
+C:\Users\днс\Downloads\Курсач\Курсач\Курсач\obj\Debug\Курсач.pdb
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe.config
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.exe
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.pdb
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.pdb
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.BossForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.CustomerForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.EnterDataForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.MainForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.LoginForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.MakeDealForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.SaveForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.EmployerForm.resources
