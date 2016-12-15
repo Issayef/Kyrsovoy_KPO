@@ -20,7 +20,8 @@ namespace Курсач
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            Application.Exit();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -29,5 +30,12 @@ namespace Курсач
             _saveForm.Owner = this;
             _saveForm.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StockForm sklad = new StockForm();
+            sklad.ShowDialog();
+        }
+        
     }
 }

@@ -21,10 +21,9 @@ namespace Курсач
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //_customerForm = new CustomerForm();
-            //_customerForm.Owner = this;
-            //_customerForm.ShowDialog();
-            Close();
+            
+            this.Close();
+            Application.Exit();
         }
     }
 }

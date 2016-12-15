@@ -43,5 +43,10 @@ namespace Курсач
             _supplyerForm.Owner = this;
             _supplyerForm.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

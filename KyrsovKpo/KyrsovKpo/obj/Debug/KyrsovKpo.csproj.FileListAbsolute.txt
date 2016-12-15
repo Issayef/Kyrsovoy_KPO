@@ -1,1 +1,10 @@
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.exe.config
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.exe
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.pdb
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.dll
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.SqlServer.dll
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.xml
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.SqlServer.xml
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.csprojResolveAssemblyReference.cache
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.exe
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.pdb

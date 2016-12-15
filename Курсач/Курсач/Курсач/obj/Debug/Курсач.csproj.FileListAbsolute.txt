@@ -42,10 +42,7 @@ E:\Курсач\Курсач\obj\Debug\Курсач.BossForm.resources
 C:\Users\днс\Downloads\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe.config
 C:\Users\днс\Downloads\Курсач\Курсач\Курсач\obj\Debug\Курсач.exe
 C:\Users\днс\Downloads\Курсач\Курсач\Курсач\obj\Debug\Курсач.pdb
-E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe.config
-E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.exe
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.pdb
-E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.pdb
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.BossForm.resources
@@ -58,3 +55,13 @@ E:\YandexDisk\_универ\3 курс\Конструирование ПО\_ку
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.SaveForm.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.EmployerForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.dll
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.SqlServer.dll
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\KyrsovKpo.exe
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\KyrsovKpo.pdb
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.xml
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.SqlServer.xml
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe.config
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.exe
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.StockForm.resources
