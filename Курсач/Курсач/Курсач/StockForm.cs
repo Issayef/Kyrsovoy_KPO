@@ -130,6 +130,7 @@ namespace Курсач
             }
         }
 
+        
         void InitializeListBox()
         {
             using (var db = new TradeDB())
@@ -147,6 +148,13 @@ namespace Курсач
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm log = new LoginForm();
+            log.ShowDialog();
         }
     }
 }
