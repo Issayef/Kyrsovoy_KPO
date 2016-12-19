@@ -15,7 +15,7 @@ namespace Курсач
         {
             using (var db = new TradeDB())
             {
-                Customers cust = new Customers
+                Customer cust = new Customer
                 {
                     
                     CompanyName = comName,

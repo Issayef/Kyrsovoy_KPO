@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище TradeDBModelContainer" CdmEntityContainer="TradeDBEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TradeDBModel1Container" CdmEntityContainer="TradeDBModel_2">
     <EntitySetMapping Name="Categories">
-      <EntityTypeMapping TypeName="TradeDBModel.Categories">
+      <EntityTypeMapping TypeName="TradeDBModel1.Category">
         <MappingFragment StoreEntitySet="Categories">
           <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
           <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
@@ -11,7 +11,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Customers">
-      <EntityTypeMapping TypeName="TradeDBModel.Customers">
+      <EntityTypeMapping TypeName="TradeDBModel1.Customer">
         <MappingFragment StoreEntitySet="Customers">
           <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
           <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -30,7 +30,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Employees">
-      <EntityTypeMapping TypeName="TradeDBModel.Employees">
+      <EntityTypeMapping TypeName="TradeDBModel1.Employee">
         <MappingFragment StoreEntitySet="Employees">
           <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -47,8 +47,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Loginn">
-      <EntityTypeMapping TypeName="TradeDBModel.Loginn">
+    <EntitySetMapping Name="Loginns">
+      <EntityTypeMapping TypeName="TradeDBModel1.Loginn">
         <MappingFragment StoreEntitySet="Loginn">
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="Password" ColumnName="Password" />
@@ -56,7 +56,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrderDetails">
-      <EntityTypeMapping TypeName="TradeDBModel.OrderDetails">
+      <EntityTypeMapping TypeName="TradeDBModel1.OrderDetail">
         <MappingFragment StoreEntitySet="OrderDetails">
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -66,7 +66,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Orders">
-      <EntityTypeMapping TypeName="TradeDBModel.Orders">
+      <EntityTypeMapping TypeName="TradeDBModel1.Order">
         <MappingFragment StoreEntitySet="Orders">
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
@@ -84,7 +84,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="TradeDBModel.Products">
+      <EntityTypeMapping TypeName="TradeDBModel1.Product">
         <MappingFragment StoreEntitySet="Products">
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -98,7 +98,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Suppliers">
-      <EntityTypeMapping TypeName="TradeDBModel.Suppliers">
+      <EntityTypeMapping TypeName="TradeDBModel1.Supplier">
         <MappingFragment StoreEntitySet="Suppliers">
           <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
           <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -116,8 +116,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Supply">
-      <EntityTypeMapping TypeName="TradeDBModel.Supply">
+    <EntitySetMapping Name="Supplies">
+      <EntityTypeMapping TypeName="TradeDBModel1.Supply">
         <MappingFragment StoreEntitySet="Supply">
           <ScalarProperty Name="SupplyID" ColumnName="SupplyID" />
           <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -128,7 +128,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SupplyDetails">
-      <EntityTypeMapping TypeName="TradeDBModel.SupplyDetails">
+      <EntityTypeMapping TypeName="TradeDBModel1.SupplyDetail">
         <MappingFragment StoreEntitySet="SupplyDetails">
           <ScalarProperty Name="SupplyID" ColumnName="SupplyID" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />

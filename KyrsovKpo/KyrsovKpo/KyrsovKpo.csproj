@@ -58,68 +58,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categories.cs">
-      <DependentUpon>TradeDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customers.cs">
-      <DependentUpon>TradeDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employees.cs">
-      <DependentUpon>TradeDBModel.tt</DependentUpon>
+    <Compile Include="Category.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
     </Compile>
     <Compile Include="Company.cs" />
-    <Compile Include="OrderDetails.cs">
-      <DependentUpon>TradeDBModel.tt</DependentUpon>
+    <Compile Include="Customer.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
     </Compile>
-    <Compile Include="Orders.cs">
-      <DependentUpon>TradeDBModel.tt</DependentUpon>
+    <Compile Include="Employee.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
     </Compile>
-    <Compile Include="Products.cs">
-      <DependentUpon>TradeDBModel.tt</DependentUpon>
+    <Compile Include="Loginn.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Suppliers.cs">
-      <DependentUpon>TradeDBModel.tt</DependentUpon>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
     </Compile>
-    <Compile Include="TradeDBModel.Context.cs">
+    <Compile Include="Supply.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyDetail.cs">
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TradeDBModel_2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TradeDBModel.Context.tt</DependentUpon>
+      <DependentUpon>TradeDBModel_2.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="TradeDBModel.cs">
+    <Compile Include="TradeDBModel_2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TradeDBModel.tt</DependentUpon>
+      <DependentUpon>TradeDBModel_2.tt</DependentUpon>
     </Compile>
-    <Compile Include="TradeDBModel.Designer.cs">
+    <Compile Include="TradeDBModel_2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TradeDBModel.edmx</DependentUpon>
+      <DependentUpon>TradeDBModel_2.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
-    <EntityDeploy Include="TradeDBModel.edmx">
+    <EntityDeploy Include="TradeDBModel_2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TradeDBModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>TradeDBModel_2.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="TradeDBModel.edmx.diagram">
-      <DependentUpon>TradeDBModel.edmx</DependentUpon>
+    <None Include="TradeDBModel_2.edmx.diagram">
+      <DependentUpon>TradeDBModel_2.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TradeDBModel.Context.tt">
+    <Content Include="TradeDBModel_2.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TradeDBModel.edmx</DependentUpon>
-      <LastGenOutput>TradeDBModel.Context.cs</LastGenOutput>
+      <DependentUpon>TradeDBModel_2.edmx</DependentUpon>
+      <LastGenOutput>TradeDBModel_2.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="TradeDBModel.tt">
+    <Content Include="TradeDBModel_2.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TradeDBModel.edmx</DependentUpon>
-      <LastGenOutput>TradeDBModel.cs</LastGenOutput>
+      <DependentUpon>TradeDBModel_2.edmx</DependentUpon>
+      <LastGenOutput>TradeDBModel_2.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

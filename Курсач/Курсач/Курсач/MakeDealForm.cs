@@ -19,8 +19,9 @@ namespace Курсач
             InitializeListBox();
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
+            
         }
-
+        
         private void button4_Click(object sender, EventArgs e)
         {
             
@@ -148,8 +149,9 @@ namespace Курсач
                             select b;
                 foreach (var item in query)
                 {
-                    textBox1.Text = item.UnitsInStock.ToString();
+                    label9.Text = item.UnitsInStock.ToString();
                     textBox2.Text = item.UnitPrice.ToString();
+                    label11.Text = (item.UnitsInStock-item.UnitsOnOrder).ToString();
                 }
             }    
         }
@@ -169,44 +171,135 @@ namespace Курсач
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //var column1 = new DataGridViewTextBoxColumn();
-            //var column2 = new DataGridViewCheckBoxColumn();
-            //var column3 = new DataGridViewCheckBoxColumn();
-            //column1.HeaderText = "Столбец1"; column1.Name = "Column1";
-            //column2.HeaderText = "Столбец2"; column2.Name = "Column2";
-            //column3.HeaderText = "Столбец3"; column2.Name = "Column3";
-            //dataGridView1.Columns.AddRange(new DataGridViewColumn[] { column1, column2,column3 });
-
             int n=dataGridView1.Rows.Add();
             string s= listBox2.SelectedItem.ToString();
             dataGridView1.Rows[n].Cells[0].Value = s;
-            dataGridView1.Rows[n].Cells[1].Value = textBox1.Text;
-            dataGridView1.Rows[n].Cells[2].Value = textBox2.Text;
+            dataGridView1.Rows[n].Cells[1].Value = textBox1.Text.ToString();
+            dataGridView1.Rows[n].Cells[2].Value = textBox2.Text.ToString();
+            getPrice();
+            
         }
+
+        public double total = 0;
+        void getPrice()
+        {
+            //int n = dataGridView1.Rows.Add();
+            int n = dataGridView1.Rows.Count;
+            int count;
+            double price;
+            count = Convert.ToInt32(dataGridView1.Rows[n-2].Cells[1].Value);
+            price = Convert.ToDouble(dataGridView1.Rows[n-2].Cells[2].Value);
+            total = total + count * price;
+            label3.Text = total.ToString();
+        }
+        void editPrice()
+        {
+            //int n = dataGridView1.Rows.Add();
+            int n = dataGridView1.Rows.Count;
+            int count;
+            double price;
+            count = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[1].Value);
+            price = Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[2].Value);
+            total = total + count * price;
+            label3.Text = total.ToString();
+        }
+        void deletePrice()
+        {
+            //int n = dataGridView1.Rows.Add();
+            int n = dataGridView1.Rows.Count;
+            int count;
+            double price;
+            count = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[1].Value);
+            price = Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[2].Value);
+            total = total - count * price;
+            label3.Text = total.ToString();
+        }
+
 
         private void button6_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
-            dt.TableName = "Заказ";
-            dt.Columns.Add("Наименование");
-            dt.Columns.Add("Количество");
-            dt.Columns.Add("Стоимость");
+            dt.TableName = "Products";
+            dt.Columns.Add("ProductName");
+            dt.Columns.Add("UnitsOnOrder");
+            dt.Columns.Add("UnitPrice");
             ds.Tables.Add(dt);
 
+            DataTable dt1 = new DataTable();
+            dt1.TableName = "Orders";
+            dt1.Columns.Add("ShipName");
+            dt1.Columns.Add("OrderDate");
+            dt1.Columns.Add("RequiredDate");
+            ds.Tables.Add(dt1);
+
             foreach (DataGridViewRow r in dataGridView1.Rows) {
-                DataRow row = ds.Tables["Заказ"].NewRow();
+                DataRow row = ds.Tables["Products"].NewRow();
                 if (r.Cells[0].Value != null)
                 {
-                    row["Наименование"] = r.Cells[0].Value.ToString();
-                    row["Количество"] = r.Cells[1].Value.ToString();
-                    row["Стоимость"] = r.Cells[2].Value.ToString();
-                    ds.Tables["Заказ"].Rows.Add(row);
+                    row["ProductName"] = r.Cells[0].Value.ToString();
+                    row["UnitsOnOrder"] = r.Cells[1].Value.ToString();
+                    row["UnitPrice"] = r.Cells[2].Value.ToString();
+                    ds.Tables["Products"].Rows.Add(row);
                 }
                 
             }
-            ds.WriteXml("E:\\Data.xml");
-            
+            foreach (DataGridViewRow r in dataGridView2.Rows)
+            {
+                DataRow row = ds.Tables["Orders"].NewRow();
+                if (r.Cells[0].Value != null)
+                {
+                    row["ShipName"] = r.Cells[0].Value.ToString();
+                    row["OrderDate"] = r.Cells[1].Value.ToString();
+                    row["RequiredDate"] = r.Cells[2].Value.ToString();
+                    ds.Tables["Orders"].Rows.Add(row);
+                }
+
+            }
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "XML File|*.xml";
+            saveFileDialog1.Title = "Save an XML File";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = saveFileDialog1.FileName;
+                ds.WriteXml(fileName);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            ds.ReadXml("E:\\Data.xml");
+            foreach (DataRow item in ds.Tables["Products"].Rows)
+            {
+                int n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = item["ProductName"].ToString();
+                dataGridView1.Rows[n].Cells[1].Value = item["UnitsOnOrder"];
+                dataGridView1.Rows[n].Cells[2].Value = item["UnitPrice"];
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            deletePrice();
+            dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            deletePrice();
+            dataGridView1.SelectedRows[0].Cells[1].Value = textBox1.Text;
+            editPrice();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int n1 = dataGridView2.Rows.Add();
+            dataGridView2.Rows[n1].Cells[0].Value = textBox3.Text;
+            dataGridView2.Rows[n1].Cells[1].Value = DateTime.Now;
+            dataGridView2.Rows[n1].Cells[2].Value = DateTime.Now.AddDays(7);
         }
     }
 }

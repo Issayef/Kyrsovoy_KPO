@@ -98,6 +98,7 @@
     <Compile Include="MakeDealForm.Designer.cs">
       <DependentUpon>MakeDealForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveForm.cs">
@@ -175,6 +176,9 @@
       <Project>{b71e5a09-0b3c-4465-b4ce-b8a1fddfee88}</Project>
       <Name>KyrsovKpo</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

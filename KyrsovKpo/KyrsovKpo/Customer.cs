@@ -12,28 +12,29 @@ namespace KyrsovKpo
     using System;
     using System.Collections.Generic;
     
-    public partial class Employees
+    public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Employees()
+        public Customer()
         {
-            this.Orders = new HashSet<Orders>();
+            this.Orders = new HashSet<Order>();
         }
     
-        public int EmployeeID { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string Title { get; set; }
-        public Nullable<System.DateTime> BirthDate { get; set; }
-        public Nullable<System.DateTime> HireDate { get; set; }
+        public int CustomerID { get; set; }
+        public string CompanyName { get; set; }
+        public string ContactName { get; set; }
+        public string ContactTitle { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string Region { get; set; }
         public string PostalCode { get; set; }
         public string Country { get; set; }
         public string Phone { get; set; }
+        public string Fax { get; set; }
+        public Nullable<int> INN { get; set; }
+        public Nullable<int> PaymentAccount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

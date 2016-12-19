@@ -15,7 +15,7 @@ namespace KyrsovKpo
         public Company()
         {
             CompanyName = "";
-            Capital = 0;
+            Capital = 15000;
         }
         public Company(string name, double capital)
         {

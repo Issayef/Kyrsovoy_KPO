@@ -12,15 +12,16 @@ namespace KyrsovKpo
     using System;
     using System.Collections.Generic;
     
-    public partial class Customers
+    public partial class Supplier
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Customers()
+        public Supplier()
         {
-            this.Orders = new HashSet<Orders>();
+            this.Products = new HashSet<Product>();
+            this.Supplies = new HashSet<Supply>();
         }
     
-        public int CustomerID { get; set; }
+        public int SupplierID { get; set; }
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
         public string ContactTitle { get; set; }
@@ -35,6 +36,8 @@ namespace KyrsovKpo
         public Nullable<int> PaymentAccount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Supply> Supplies { get; set; }
     }
 }

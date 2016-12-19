@@ -41,6 +41,13 @@ namespace Курсач
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
             Application.Exit();
         }
     }
