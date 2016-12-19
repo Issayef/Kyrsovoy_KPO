@@ -17,6 +17,7 @@ namespace Курсач
             InitializeComponent();
         }
         public SaveForm _saveForm;
+        public StatisticForm _statForm;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -36,6 +37,12 @@ namespace Курсач
             StockForm sklad = new StockForm();
             sklad.ShowDialog();
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _statForm = new StatisticForm();
+            _statForm.Owner = this;
+            _statForm.ShowDialog();
+        }
     }
 }
