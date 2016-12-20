@@ -14,10 +14,11 @@ namespace Курсач
 {
     public partial class StatisticForm : Form
     {
+        public TradeDB db = new TradeDB();
         public StatisticForm()
         {
             InitializeComponent();
-            ChooseGood();
+            ChooseType();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -26,22 +27,11 @@ namespace Курсач
         }
 
 
-        public void ChooseGood()
+        public void ChooseType()
         {
             comboBox1.Items.Clear();
-
-
-            using (var db = new TradeDB())
-            {
-                var query = from b in db.Categories
-                            select b;
-
-                foreach (var item in query)
-                {
-                    comboBox1.Items.Add(item.CategoryName);
-                }
-
-            }
+            comboBox1.Items.Add("Продажи");
+            comboBox1.Items.Add("Поставки");
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -49,61 +39,127 @@ namespace Курсач
         }
 
 
+        public void Sale(DateTime _fromDate, DateTime _toDate)
+        {
+            var query = from b in db.Orders
+                        where b.OrderDate > _fromDate && b.OrderDate < _toDate
+                        select b;
+            foreach (var item in query)
+            {
+                int n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = item.OrderID;
+                dataGridView1.Rows[n].Cells[1].Value = item.ShipName;
+                dataGridView1.Rows[n].Cells[2].Value = item.OrderDate;
+                dataGridView1.Rows[n].Cells[3].Value = item.TotalPrice;
+            }
+        }
+       
+        public void Delivery(DateTime _fromDate, DateTime _toDate)
+        {
+            var query = from b in db.Supplies
+                        where b.SupplyDate > _fromDate && b.SupplyDate < _toDate
+                        select b;
+
+            foreach (var item in query)
+            {
+                int n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = item.SupplierID;
+                dataGridView1.Rows[n].Cells[1].Value = item.CompanyName;
+                dataGridView1.Rows[n].Cells[2].Value = item.SupplyDate;
+                dataGridView1.Rows[n].Cells[3].Value = item.TotalPrice;
+            }
+        }
+
+        public void OrderInfo()
+        {
+            var query = from b in db.OrderDetails
+                        where b.OrderID == 10
+                        select b;
+            foreach (var item in query)
+            {
+                int n = dataGridView2.Rows.Add();
+                dataGridView2.Rows[n].Cells[0].Value = item.ProductName;
+                dataGridView2.Rows[n].Cells[1].Value = item.UnitPrice;
+                dataGridView2.Rows[n].Cells[2].Value = item.Quantity;
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
 
-            if (textBox1.Text != "" && textBox2.Text != "")
+            if (radioButton3.Checked)
             {
-                using (var db = new TradeDB())
+                // if (textBox1.Text != "" && textBox2.Text != "")
+                //   {
+                //   using (var db = new TradeDB())
+                //                {
+
+                DateTime _fromDate = new DateTime(2009, 5, 28); //StringToDate(textBox1.Text);
+                DateTime _toDate = new DateTime(2020, 5, 28);//StringToDate(textBox2.Text);
+
+                if (_fromDate < _toDate)
                 {
 
-                    DateTime _fromDate = StringToDate(textBox1.Text);
-                    DateTime _toDate = StringToDate(textBox2.Text);
-
-                    if (_fromDate < _toDate)
+                    if (comboBox1.SelectedItem.ToString() == "Продажи")
                     {
-                        if (radioButton2.Checked)
-                        {
-                            var query = from b in db.Orders
-                                        where b.OrderDate > _fromDate && b.OrderDate < _toDate
-                                        select b;
-                            foreach (var item in query)
-                            {
-                                int n = dataGridView1.Rows.Add();
-                                dataGridView1.Rows[n].Cells[0].Value = item.OrderID;
-                                dataGridView1.Rows[n].Cells[1].Value = item.ShipName;
-                                dataGridView1.Rows[n].Cells[2].Value = item.OrderDate;
-                                dataGridView1.Rows[n].Cells[3].Value = item.TotalPrice;
-                            }
-                        }
-                        if (radioButton1.Checked)
-                        {
-                            var query = from b in db.Suppliers
-                                      //  where b.Order > _fromDate && b.OrderDate < _toDate
-                                        select b;
-                            foreach (var item in query)
-                            {
-                                int n = dataGridView1.Rows.Add();
-                                dataGridView1.Rows[n].Cells[0].Value = item.SupplierID;
-                                dataGridView1.Rows[n].Cells[1].Value = item.CompanyName;
-                                dataGridView1.Rows[n].Cells[2].Value = item.Phone;
-                                dataGridView1.Rows[n].Cells[3].Value = item.Fax;
-                            }
-                        }
+                        Sale(_fromDate, _toDate);
                     }
-                    else
+
+                    if (comboBox1.SelectedItem.ToString() == "Поставки")
                     {
-                        MessageBox.Show("Начальная дата не может быть больше конечной!");
+                        Delivery(_fromDate, _toDate);
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Начальная дата не может быть больше конечной!");
+                }
+                //  }
 
+                //   }
+                //else
+                //{
+                //    MessageBox.Show("Введите временные данные!");
+                //}    
             }
-            else
+            if (radioButton1.Checked)
             {
-                MessageBox.Show("Введите временные данные!");
-            }    
+                DateTime _fromDate = DateTime.Now.AddMonths(-1); ; //StringToDate(textBox1.Text);
+                DateTime _toDate = DateTime.Now;//StringToDate(textBox2.Text);
+
+                if (_fromDate < _toDate)
+                {
+
+                    if (comboBox1.SelectedItem.ToString() == "Продажи")
+                    {
+                        Sale(_fromDate, _toDate);
+                    }
+
+                    if (comboBox1.SelectedItem.ToString() == "Поставки")
+                    {
+                        Delivery(_fromDate, _toDate);
+                    }
+                }
+            }
+            if (radioButton2.Checked)
+            {
+                DateTime _fromDate = DateTime.Now.AddYears(-1); //StringToDate(textBox1.Text);
+                DateTime _toDate = DateTime.Now;//StringToDate(textBox2.Text);
+
+                if (_fromDate < _toDate)
+                {
+                    if (comboBox1.SelectedItem.ToString() == "Продажи")
+                    {
+                        Sale(_fromDate, _toDate);
+                    }
+
+                    if (comboBox1.SelectedItem.ToString() == "Поставки")
+                    {
+                        Delivery(_fromDate, _toDate);
+                    }
+                }
+            }
         }
 
         public DateTime StringToDate(string str)
@@ -133,6 +189,16 @@ namespace Курсач
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OrderInfo();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
 
         }
