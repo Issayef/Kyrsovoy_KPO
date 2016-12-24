@@ -93,6 +93,7 @@
           <Property Name="CategoryID" Type="int" />
           <Property Name="QuantityPerUnit" Type="nvarchar" MaxLength="20" />
           <Property Name="UnitPrice" Type="money" />
+          <Property Name="PriceForSale" Type="money" />
           <Property Name="UnitsInStock" Type="int" />
           <Property Name="UnitsOnOrder" Type="int" />
         </EntityType>
@@ -122,7 +123,7 @@
           <Property Name="CompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SupplierID" Type="int" />
           <Property Name="SupplyDate" Type="datetime" />
-          <Property Name="TotalPrice" Type="nchar" MaxLength="10" />
+          <Property Name="TotalPrice" Type="money" />
         </EntityType>
         <EntityType Name="SupplyDetails">
           <Key>
@@ -376,6 +377,7 @@
           <Property Name="CategoryID" Type="Int32" />
           <Property Name="QuantityPerUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PriceForSale" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="UnitsInStock" Type="Int32" />
           <Property Name="UnitsOnOrder" Type="Int32" />
           <NavigationProperty Name="Categories" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
@@ -410,7 +412,7 @@
           <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SupplierID" Type="Int32" />
           <Property Name="SupplyDate" Type="DateTime" Precision="3" />
-          <Property Name="TotalPrice" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="Suppliers" Relationship="Self.FK_Supply_ToSuppliers" FromRole="Supply" ToRole="Suppliers" />
           <NavigationProperty Name="SupplyDetails" Relationship="Self.FK_SupplyDetails_ToSupply" FromRole="Supply" ToRole="SupplyDetails" />
         </EntityType>
@@ -522,7 +524,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TradeDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TradeDB" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Categories" />
           <EntitySet Name="Customers" EntityType="Self.Customers" />
           <EntitySet Name="Employees" EntityType="Self.Employees" />
@@ -571,7 +573,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище TradeDBModelContainer" CdmEntityContainer="TradeDBEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище TradeDBModelContainer" CdmEntityContainer="TradeDB">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="TradeDBModel.Categories">
               <MappingFragment StoreEntitySet="Categories">
@@ -663,6 +665,7 @@
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="QuantityPerUnit" ColumnName="QuantityPerUnit" />
                 <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="PriceForSale" ColumnName="PriceForSale" />
                 <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
                 <ScalarProperty Name="UnitsOnOrder" ColumnName="UnitsOnOrder" />
               </MappingFragment>
@@ -725,6 +728,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

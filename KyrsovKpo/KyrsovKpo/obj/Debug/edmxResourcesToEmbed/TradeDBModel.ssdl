@@ -88,6 +88,7 @@
     <Property Name="CategoryID" Type="int" />
     <Property Name="QuantityPerUnit" Type="nvarchar" MaxLength="20" />
     <Property Name="UnitPrice" Type="money" />
+    <Property Name="PriceForSale" Type="money" />
     <Property Name="UnitsInStock" Type="int" />
     <Property Name="UnitsOnOrder" Type="int" />
   </EntityType>
@@ -117,7 +118,7 @@
     <Property Name="CompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="SupplierID" Type="int" />
     <Property Name="SupplyDate" Type="datetime" />
-    <Property Name="TotalPrice" Type="nchar" MaxLength="10" />
+    <Property Name="TotalPrice" Type="money" />
   </EntityType>
   <EntityType Name="SupplyDetails">
     <Key>

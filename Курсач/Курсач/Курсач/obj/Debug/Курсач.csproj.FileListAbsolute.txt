@@ -48,12 +48,10 @@ E:\YandexDisk\_универ\3 курс\Конструирование ПО\_ку
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.BossForm.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.CustomerForm.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.EnterDataForm.resources
-E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.MainForm.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.LoginForm.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.MakeDealForm.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
-E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.SaveForm.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.EmployerForm.resources
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.dll
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.SqlServer.dll
@@ -65,29 +63,8 @@ E:\YandexDisk\_универ\3 курс\Конструирование ПО\_ку
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.exe
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.StockForm.resources
-E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.SellerForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe.config
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.exe
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.pdb
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\Курсач.pdb
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.dll
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\KyrsovKpo.exe
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\KyrsovKpo.pdb
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.xml
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.BossForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.CustomerForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.EmployerForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.EnterDataForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.MainForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.LoginForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.MakeDealForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.SaveForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.SellerForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.StockForm.resources
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.StatisticForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.BossSuppliesForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.EnterDataSupplierForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.MakeSupplyForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.SupplierForm.resources
+E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\Курсач\Курсач\Курсач\obj\Debug\Курсач.StatisticForm.resources

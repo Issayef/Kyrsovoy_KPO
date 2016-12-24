@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,25 +19,12 @@ namespace Курсач
             InitializeComponent();
             ChooseType();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-
         public void ChooseType()
         {
             comboBox1.Items.Clear();
             comboBox1.Items.Add("Продажи");
             comboBox1.Items.Add("Поставки");
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
         public void Sale(DateTime _fromDate, DateTime _toDate)
         {
             var query = from b in db.Orders
@@ -53,10 +39,10 @@ namespace Курсач
                 dataGridView1.Rows[n].Cells[3].Value = item.TotalPrice;
             }
         }
-       
+
         public void Delivery(DateTime _fromDate, DateTime _toDate)
         {
-            var query = from b in db.Supplies
+            var query = from b in db.Supply
                         where b.SupplyDate > _fromDate && b.SupplyDate < _toDate
                         select b;
 
@@ -69,7 +55,6 @@ namespace Курсач
                 dataGridView1.Rows[n].Cells[3].Value = item.TotalPrice;
             }
         }
-
         public void OrderInfo()
         {
             dataGridView2.Rows.Clear();
@@ -101,11 +86,23 @@ namespace Курсач
                     dataGridView2.Rows[n].Cells[2].Value = item.Quantity;
                 }
             }
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public DateTime StringToDate(string str)
+        {
+            int[] date1 = new int[3];
+            string[] split = str.Split('.');
+            int i = 0;
+            foreach (string item in split)
+            {
+                date1[i] = int.Parse(item);
+                i++;
+            }
+            DateTime Date = new DateTime(date1[2], date1[1], date1[0]);
+            return Date;
+        }
+
+        private void getstat_button_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
 
@@ -120,22 +117,22 @@ namespace Курсач
                         DateTime _toDate = StringToDate(textBox2.Text);
 
                         if (_fromDate < _toDate)
-                {
+                        {
 
-                    if (comboBox1.SelectedItem.ToString() == "Продажи")
-                    {
-                        Sale(_fromDate, _toDate);
-                    }
+                            if (comboBox1.SelectedItem.ToString() == "Продажи")
+                            {
+                                Sale(_fromDate, _toDate);
+                            }
 
-                    if (comboBox1.SelectedItem.ToString() == "Поставки")
-                    {
-                        Delivery(_fromDate, _toDate);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Начальная дата не может быть больше конечной!");
-                }
+                            if (comboBox1.SelectedItem.ToString() == "Поставки")
+                            {
+                                Delivery(_fromDate, _toDate);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Начальная дата не может быть больше конечной!");
+                        }
                     }
 
                 }
@@ -183,45 +180,19 @@ namespace Курсач
             }
         }
 
-        public DateTime StringToDate(string str)
-        {
-            int[] date1 = new int[3];
-            string[] split = str.Split('.');
-            int i = 0;
-            foreach (string item in split)
-            {
-                date1[i] = int.Parse(item);
-                i++;
-            }
-            DateTime Date = new DateTime(date1[2], date1[1], date1[0]);
-            return Date;
-        }
-
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void info_button_Click(object sender, EventArgs e)
         {
             OrderInfo();
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void back_button_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

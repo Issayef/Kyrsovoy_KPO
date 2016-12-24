@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище TradeDBModelContainer" CdmEntityContainer="TradeDBEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TradeDBModelContainer" CdmEntityContainer="TradeDB">
     <EntitySetMapping Name="Categories">
       <EntityTypeMapping TypeName="TradeDBModel.Categories">
         <MappingFragment StoreEntitySet="Categories">
@@ -92,6 +92,7 @@
           <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
           <ScalarProperty Name="QuantityPerUnit" ColumnName="QuantityPerUnit" />
           <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="PriceForSale" ColumnName="PriceForSale" />
           <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
           <ScalarProperty Name="UnitsOnOrder" ColumnName="UnitsOnOrder" />
         </MappingFragment>

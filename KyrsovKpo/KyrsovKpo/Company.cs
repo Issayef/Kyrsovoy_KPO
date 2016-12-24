@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,15 +10,13 @@ namespace KyrsovKpo
 {
     public class Company
     {
-        private string CompanyName;
-        private double Capital;
+        private string CompanyName= "Progers";
+        static string s=File.ReadAllText("E:\\company.txt");
+        public static decimal Capital = Convert.ToDecimal(s);
 
-        public Company()
-        {
-            CompanyName = "";
-            Capital = 15000;
-        }
-        public Company(string name, double capital)
+
+
+        public Company(string name, decimal capital)
         {
             CompanyName = name;
             Capital = capital;
@@ -26,7 +25,7 @@ namespace KyrsovKpo
         {
             return String.Format("CompanyName: " + CompanyName + "; Capital left: " + Capital);
         }
-        void deposit(double money)
+        public static void deposit(decimal money)
         {
             if (money < 0)
                 MessageBox.Show("Разрешена только положительная сумма");
@@ -34,7 +33,7 @@ namespace KyrsovKpo
 		Capital += money;
         }
         //списание денег фирмы
-        void withdrawal(double money)
+        public static void withdrawal(decimal money)
         {
             if (money < 0)
                 MessageBox.Show("Разрешена только положительная сумма");
@@ -43,12 +42,5 @@ namespace KyrsovKpo
             else
                 MessageBox.Show("У фирмы не достаточно денег для проведения операции");
         }
-        public void calculateTotalPrice()
-        {
-
-        }
-        public void showStatictic() { }
-
-
     }
 }

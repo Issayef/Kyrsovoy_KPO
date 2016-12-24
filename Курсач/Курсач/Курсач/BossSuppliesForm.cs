@@ -12,15 +12,16 @@ using System.Windows.Forms;
 
 namespace Курсач
 {
-    public partial class EmployerForm : Form
+    public partial class BossSuppliesForm : Form
     {
-        public EmployerForm()
+        public BossSuppliesForm()
         {
             InitializeComponent();
             label2.Text = Company.Capital.ToString();
         }
         string path;
-        private void button3_Click(object sender, EventArgs e)
+
+        private void open_button_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
             dataGridView2.Rows.Clear();
@@ -29,7 +30,7 @@ namespace Курсач
             System.IO.Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = @"E:\Заказы";
+            openFileDialog1.InitialDirectory = @"E:\Поставки";
             openFileDialog1.Filter = "XML File(*.xml)|*.xml";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
@@ -58,35 +59,31 @@ namespace Курсач
                 {
                     int n = dataGridView1.Rows.Add();
                     dataGridView1.Rows[n].Cells[0].Value = item["ProductName"].ToString();
-                    dataGridView1.Rows[n].Cells[1].Value = item["UnitsOnOrder"];
-                    dataGridView1.Rows[n].Cells[2].Value = item["PriceForSale"];
+                    dataGridView1.Rows[n].Cells[1].Value = item["UnitsInStock"];
+                    dataGridView1.Rows[n].Cells[2].Value = item["UnitPrice"];
                 }
-                foreach (DataRow item in ds.Tables["Orders"].Rows)
+                foreach (DataRow item in ds.Tables["Supplies"].Rows)
                 {
                     int n = dataGridView2.Rows.Add();
-                    dataGridView2.Rows[n].Cells[0].Value = item["ShipName"].ToString();
-                    dataGridView2.Rows[n].Cells[1].Value = item["OrderDate"];
-                    dataGridView2.Rows[n].Cells[2].Value = item["RequiredDate"];
-                    dataGridView2.Rows[n].Cells[3].Value = item["TotalPrice"];
+                    dataGridView2.Rows[n].Cells[0].Value = item["CompanyName"].ToString();
+                    dataGridView2.Rows[n].Cells[1].Value = item["SupplyDate"];
+                    dataGridView2.Rows[n].Cells[2].Value = item["TotalPrice"];
                 }
             }
-
-            
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void accept_button_Click(object sender, EventArgs e)
         {
             string companyname = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
-            DateTime orderdate = Convert.ToDateTime(dataGridView2.SelectedRows[0].Cells[1].Value);
-            DateTime reqdate = Convert.ToDateTime(dataGridView2.SelectedRows[0].Cells[2].Value);
-            decimal totalprice = Convert.ToDecimal(dataGridView2.SelectedRows[0].Cells[3].Value);
-            Orderr.addOrder(companyname, orderdate, reqdate, totalprice);
-            Company.deposit(totalprice);
+            DateTime supplydate = Convert.ToDateTime(dataGridView2.SelectedRows[0].Cells[1].Value);
+            decimal totalprice = Convert.ToDecimal(dataGridView2.SelectedRows[0].Cells[2].Value);
+            Suppliess.addSupply(companyname, supplydate, totalprice);
+            Company.withdrawal(totalprice);
             label2.Text = Company.Capital.ToString();
             string f2 = Company.Capital.ToString();
             File.WriteAllText("E:\\company.txt", f2);
             int n = dataGridView1.Rows.Count;
-            for (int i = 0;i< n;i++)
+            for (int i = 0; i < n; i++)
             {
                 if (dataGridView1.Rows[i].Cells[0].Value != null)
                 {
@@ -95,17 +92,17 @@ namespace Курсач
                     decimal price = Convert.ToDecimal(dataGridView1.Rows[i].Cells[2].Value);
 
                     string name = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
-                    DateTime ordate = Convert.ToDateTime(dataGridView2.SelectedRows[0].Cells[1].Value);
-                    Products.updProduct(prodName, units, price);
+                    DateTime suppldate = Convert.ToDateTime(dataGridView2.SelectedRows[0].Cells[1].Value);
+                    Products.updateforSupply(prodName, units, price);
                     using (var db = new TradeDB())
                     {
-                        var query = from b in db.Orders
-                                    where b.OrderDate == ordate && b.ShipName == name
+                        var query = from b in db.Supply
+                                    where b.SupplyDate == suppldate && b.CompanyName == name
                                     select b;
                         foreach (var item in query)
                         {
-                            int id = item.OrderID;
-                            Orderr.addOrderDetails(prodName, units, price, id);
+                            int id = item.SupplyID;
+                            Suppliess.addSupplyDetails(prodName, units, price, id);
                         }
                     }
                 }
@@ -113,20 +110,6 @@ namespace Курсач
             dataGridView1.Rows.Clear();
             dataGridView2.Rows.Clear();
             File.Delete(path);
-
-        }
-
-        private void close_button_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void back_button_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm login = new LoginForm();
-            login.ShowDialog();
-
         }
 
         private void delete_button_Click(object sender, EventArgs e)
@@ -136,49 +119,14 @@ namespace Курсач
             File.Delete(path);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void close_button_Click(object sender, EventArgs e)
         {
-            string s = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            using (var db = new TradeDB())
-            {
-                var query = from b in db.Products
-                            where b.ProductName == s
-                            select b;
-                foreach (var item in query)
-                {
-                    label4.Text =item.UnitsInStock.ToString();
-                }
-            }
+            Application.Exit();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void back_button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

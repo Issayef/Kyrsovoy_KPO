@@ -12,13 +12,19 @@ namespace KyrsovKpo
     using System;
     using System.Collections.Generic;
     
-    public partial class SupplyDetail
+    public partial class Categories
     {
-        public int SupplyID { get; set; }
-        public string ProductName { get; set; }
-        public Nullable<decimal> UnitPrice { get; set; }
-        public Nullable<int> Quantity { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Categories()
+        {
+            this.Products = new HashSet<Products>();
+        }
     
-        public virtual Supply Supply { get; set; }
+        public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
+        public string Description { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Products> Products { get; set; }
     }
 }

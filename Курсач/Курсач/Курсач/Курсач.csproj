@@ -44,7 +44,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,12 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCustomer.cs" />
+    <Compile Include="Enterdata.cs" />
     <Compile Include="BossForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BossForm.Designer.cs">
       <DependentUpon>BossForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BossSuppliesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BossSuppliesForm.Designer.cs">
+      <DependentUpon>BossSuppliesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
@@ -81,11 +86,11 @@
     <Compile Include="EnterDataForm.Designer.cs">
       <DependentUpon>EnterDataForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="EnterDataSupplierForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="EnterDataSupplierForm.Designer.cs">
+      <DependentUpon>EnterDataSupplierForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -99,21 +104,16 @@
     <Compile Include="MakeDealForm.Designer.cs">
       <DependentUpon>MakeDealForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MakeSupplyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeSupplyForm.Designer.cs">
+      <DependentUpon>MakeSupplyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs" />
+    <Compile Include="Products.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaveForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SaveForm.Designer.cs">
-      <DependentUpon>SaveForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SellerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SellerForm.Designer.cs">
-      <DependentUpon>SellerForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="StatisticForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,8 +126,18 @@
     <Compile Include="StockForm.Designer.cs">
       <DependentUpon>StockForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliess.cs" />
     <EmbeddedResource Include="BossForm.resx">
       <DependentUpon>BossForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BossSuppliesForm.resx">
+      <DependentUpon>BossSuppliesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
@@ -138,14 +148,17 @@
     <EmbeddedResource Include="EnterDataForm.resx">
       <DependentUpon>EnterDataForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="EnterDataSupplierForm.resx">
+      <DependentUpon>EnterDataSupplierForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakeDealForm.resx">
       <DependentUpon>MakeDealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeSupplyForm.resx">
+      <DependentUpon>MakeSupplyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,17 +169,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SaveForm.resx">
-      <DependentUpon>SaveForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SellerForm.resx">
-      <DependentUpon>SellerForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StatisticForm.resx">
       <DependentUpon>StatisticForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockForm.resx">
       <DependentUpon>StockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierForm.resx">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

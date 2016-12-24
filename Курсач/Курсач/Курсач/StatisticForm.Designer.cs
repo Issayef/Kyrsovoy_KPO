@@ -28,41 +28,185 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.По = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.info_button = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.back_button = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.По = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.OrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.getstat_button = new System.Windows.Forms.Button();
+            this.close_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // radioButton3
             // 
-            this.button1.Location = new System.Drawing.Point(31, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Получить статистику";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(21, 145);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(115, 17);
+            this.radioButton3.TabIndex = 36;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "указать интервал";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(21, 114);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(58, 17);
+            this.radioButton2.TabIndex = 35;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "За год";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(22, 85);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(73, 17);
+            this.radioButton1.TabIndex = 34;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "За месяц";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(169, 11);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.TabIndex = 33;
+            // 
+            // info_button
+            // 
+            this.info_button.Location = new System.Drawing.Point(302, 361);
+            this.info_button.Margin = new System.Windows.Forms.Padding(2);
+            this.info_button.Name = "info_button";
+            this.info_button.Size = new System.Drawing.Size(189, 32);
+            this.info_button.TabIndex = 32;
+            this.info_button.Text = "Информация о заказе/ поставке";
+            this.info_button.UseVisualStyleBackColor = true;
+            this.info_button.Click += new System.EventHandler(this.info_button_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductName,
+            this.UnitPrice,
+            this.Quantity});
+            this.dataGridView2.Location = new System.Drawing.Point(461, 190);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(344, 167);
+            this.dataGridView2.TabIndex = 31;
+            // 
+            // ProductName
+            // 
+            this.ProductName.Frozen = true;
+            this.ProductName.HeaderText = "ProductName";
+            this.ProductName.Name = "ProductName";
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.Frozen = true;
+            this.UnitPrice.HeaderText = "UnitPrice";
+            this.UnitPrice.Name = "UnitPrice";
+            // 
+            // Quantity
+            // 
+            this.Quantity.Frozen = true;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(470, 11);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 30;
+            // 
+            // back_button
+            // 
+            this.back_button.Location = new System.Drawing.Point(22, 361);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2);
+            this.back_button.Name = "back_button";
+            this.back_button.Size = new System.Drawing.Size(83, 32);
+            this.back_button.TabIndex = 29;
+            this.back_button.Text = "Назад";
+            this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(166, 59);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Формат даты: DD.MM.YYYY";
+            // 
+            // По
+            // 
+            this.По.AutoSize = true;
+            this.По.Location = new System.Drawing.Point(166, 118);
+            this.По.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.По.Name = "По";
+            this.По.Size = new System.Drawing.Size(24, 13);
+            this.По.TabIndex = 27;
+            this.По.Text = "По:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(166, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "С:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(169, 135);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(114, 20);
+            this.textBox2.TabIndex = 25;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(169, 98);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(114, 20);
+            this.textBox1.TabIndex = 24;
             // 
             // dataGridView1
             // 
@@ -72,137 +216,13 @@
             this.CompanyName,
             this.OrderDate,
             this.TotalPrice});
-            this.dataGridView1.Location = new System.Drawing.Point(30, 310);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 190);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 206);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(226, 144);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 22);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(226, 189);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(223, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "С:";
-            // 
-            // По
-            // 
-            this.По.AutoSize = true;
-            this.По.Location = new System.Drawing.Point(223, 169);
-            this.По.Name = "По";
-            this.По.Size = new System.Drawing.Size(30, 17);
-            this.По.TabIndex = 7;
-            this.По.Text = "По:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(223, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Формат даты: DD.MM.YYYY";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(30, 536);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 39);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Назад";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(628, 37);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 15;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProductName,
-            this.UnitPrice,
-            this.Quantity});
-            this.dataGridView2.Location = new System.Drawing.Point(553, 310);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(371, 206);
-            this.dataGridView2.TabIndex = 16;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(285, 536);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 39);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Информация о заказе";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(226, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 18;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(31, 128);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(90, 21);
-            this.radioButton1.TabIndex = 19;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "За месяц";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(30, 164);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 21);
-            this.radioButton2.TabIndex = 20;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "За год";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(30, 202);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(146, 21);
-            this.radioButton3.TabIndex = 21;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "указать интервал";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.dataGridView1.Size = new System.Drawing.Size(435, 167);
+            this.dataGridView1.TabIndex = 23;
             // 
             // OrderID
             // 
@@ -228,48 +248,52 @@
             this.TotalPrice.HeaderText = "TotalPrice";
             this.TotalPrice.Name = "TotalPrice";
             // 
-            // ProductName
+            // getstat_button
             // 
-            this.ProductName.Frozen = true;
-            this.ProductName.HeaderText = "ProductName";
-            this.ProductName.Name = "ProductName";
+            this.getstat_button.Location = new System.Drawing.Point(22, 11);
+            this.getstat_button.Margin = new System.Windows.Forms.Padding(2);
+            this.getstat_button.Name = "getstat_button";
+            this.getstat_button.Size = new System.Drawing.Size(103, 37);
+            this.getstat_button.TabIndex = 22;
+            this.getstat_button.Text = "Получить статистику";
+            this.getstat_button.UseVisualStyleBackColor = true;
+            this.getstat_button.Click += new System.EventHandler(this.getstat_button_Click);
             // 
-            // UnitPrice
+            // close_button
             // 
-            this.UnitPrice.Frozen = true;
-            this.UnitPrice.HeaderText = "UnitPrice";
-            this.UnitPrice.Name = "UnitPrice";
-            // 
-            // Quantity
-            // 
-            this.Quantity.Frozen = true;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
+            this.close_button.Location = new System.Drawing.Point(122, 369);
+            this.close_button.Name = "close_button";
+            this.close_button.Size = new System.Drawing.Size(127, 23);
+            this.close_button.TabIndex = 37;
+            this.close_button.Text = "Закрыть приложение";
+            this.close_button.UseVisualStyleBackColor = true;
+            this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // StatisticForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 650);
+            this.ClientSize = new System.Drawing.Size(827, 405);
+            this.Controls.Add(this.close_button);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.info_button);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.back_button);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.По);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.getstat_button);
             this.Name = "StatisticForm";
-            this.Text = "Statistic";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "StatisticForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,27 +301,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label По;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button info_button;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button back_button;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label По;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.Button getstat_button;
+        private System.Windows.Forms.Button close_button;
     }
 }

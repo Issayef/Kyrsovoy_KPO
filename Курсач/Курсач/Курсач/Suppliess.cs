@@ -7,49 +7,43 @@ using System.Threading.Tasks;
 
 namespace Курсач
 {
-    class Orderr
+    class Suppliess
     {
-        internal static int GetFree(int OnStock,int onOrder)
+        internal static void addSupply(string name, DateTime supplydate, decimal price)
         {
-            return OnStock - onOrder;
-        }
-        internal static void addOrder(string name,DateTime ordate, DateTime req, decimal price) {
             using (var db = new TradeDB())
             {
-                Orders ord = new Orders
+                Supply supply = new Supply
                 {
 
-                    ShipName = name,
-                    OrderDate = ordate,
-                    RequiredDate = req,
-                    TotalPrice=price
+                    CompanyName = name,
+                    SupplyDate = supplydate,
+                    TotalPrice = price
                 };
                 // 3. Добавление сущностного объекта в таблицу Customers
-                db.Orders.Add(ord);
+                db.Supply.Add(supply);
                 // 4. Вызов метода SaveChanges
                 db.SaveChanges();
 
             }
         }
-        internal static void addOrderDetails(string prodName, int units, decimal price,int id)
+        internal static void addSupplyDetails(string prodName, int units, decimal price, int id)
         {
             using (var db = new TradeDB())
             {
-                OrderDetails ord = new OrderDetails
+                SupplyDetails ord = new SupplyDetails
                 {
-                    OrderID= id,
+                    SupplyID = id,
                     ProductName = prodName,
                     Quantity = (short)units,
                     UnitPrice = price
                 };
                 // 3. Добавление сущностного объекта в таблицу Customers
-                db.OrderDetails.Add(ord);
+                db.SupplyDetails.Add(ord);
                 // 4. Вызов метода SaveChanges
                 db.SaveChanges();
 
             }
         }
-
-
     }
 }

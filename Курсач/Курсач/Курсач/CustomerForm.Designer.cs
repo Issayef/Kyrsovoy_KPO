@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.makedeal_button = new System.Windows.Forms.Button();
+            this.back_button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -46,29 +46,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // makedeal_button
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(88, 114);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 49);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Сделать \r\nзаказ/поставку";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.makedeal_button.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.makedeal_button.Location = new System.Drawing.Point(88, 114);
+            this.makedeal_button.Margin = new System.Windows.Forms.Padding(2);
+            this.makedeal_button.Name = "makedeal_button";
+            this.makedeal_button.Size = new System.Drawing.Size(146, 49);
+            this.makedeal_button.TabIndex = 1;
+            this.makedeal_button.Text = "Сделать \r\nзаказ";
+            this.makedeal_button.UseVisualStyleBackColor = true;
+            this.makedeal_button.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // back_button
             // 
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(11, 208);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Выйти из профиля";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.back_button.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back_button.Location = new System.Drawing.Point(11, 208);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2);
+            this.back_button.Name = "back_button";
+            this.back_button.Size = new System.Drawing.Size(184, 36);
+            this.back_button.TabIndex = 2;
+            this.back_button.Text = "Выйти из профиля";
+            this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -86,8 +86,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 255);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.back_button);
+            this.Controls.Add(this.makedeal_button);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustomerForm";
@@ -100,8 +100,8 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button makedeal_button;
+        private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Button button4;
     }
 }

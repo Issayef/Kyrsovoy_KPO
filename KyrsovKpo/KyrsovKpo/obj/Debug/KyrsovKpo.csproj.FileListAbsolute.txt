@@ -8,13 +8,3 @@ E:\YandexDisk\_универ\3 курс\Конструирование ПО\_ку
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.csprojResolveAssemblyReference.cache
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.exe
 E:\YandexDisk\_универ\3 курс\Конструирование ПО\_курсовая\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.pdb
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.exe.config
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.exe
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.pdb
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.dll
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.xml
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.csprojResolveAssemblyReference.cache
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.exe
-C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.pdb

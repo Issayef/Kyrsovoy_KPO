@@ -11,22 +11,28 @@ using System.Windows.Forms;
 
 namespace Курсач
 {
-    public partial class MakeDealForm : Form
+    public partial class MakeSupplyForm : Form
     {
-        public MakeDealForm()
+        public MakeSupplyForm()
         {
             InitializeComponent();
             InitializeListBox();
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
-            
         }
-        
-        private void button4_Click(object sender, EventArgs e)
+        public double total = 0;
+        void InitializeListBox()
         {
-            
-            this.Close();
-            
+            using (var db = new TradeDB())
+            {
+                var query = from b in db.Categories
+                            select b;
+                foreach (var item in query)
+                {
+                    listBox1.Items.Add(item.CategoryName);
+                }
+
+            }
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -149,52 +155,22 @@ namespace Курсач
                             select b;
                 foreach (var item in query)
                 {
-                    textBox2.Text = item.PriceForSale.ToString();
-                    label11.Text = (item.UnitsInStock-item.UnitsOnOrder).ToString();
+                    textBox2.Text = item.UnitPrice.ToString();
                 }
-            }    
-        }
-        void InitializeListBox()
-        {
-            using (var db = new TradeDB())
-            {
-                var query = from b in db.Categories
-                            select b;
-                foreach (var item in query)
-                {
-                    listBox1.Items.Add(item.CategoryName);
-                }
-
             }
         }
-        public double total = 0;
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            int n=dataGridView1.Rows.Add();
-            string s= listBox2.SelectedItem.ToString();
-            dataGridView1.Rows[n].Cells[0].Value = s;
-            dataGridView1.Rows[n].Cells[1].Value = textBox1.Text.ToString();
-            dataGridView1.Rows[n].Cells[2].Value = textBox2.Text.ToString();
-            getPrice();
-            
-        }
-
-        
         void getPrice()
         {
-            //int n = dataGridView1.Rows.Add();
             int n = dataGridView1.Rows.Count;
             int count;
             double price;
-            count = Convert.ToInt32(dataGridView1.Rows[n-2].Cells[1].Value);
-            price = Convert.ToDouble(dataGridView1.Rows[n-2].Cells[2].Value);
+            count = Convert.ToInt32(dataGridView1.Rows[n - 2].Cells[1].Value);
+            price = Convert.ToDouble(dataGridView1.Rows[n - 2].Cells[2].Value);
             total = total + count * price;
             label3.Text = total.ToString();
         }
         void editPrice()
         {
-            //int n = dataGridView1.Rows.Add();
             int n = dataGridView1.Rows.Count;
             int count;
             double price;
@@ -205,7 +181,6 @@ namespace Курсач
         }
         void deletePrice()
         {
-            //int n = dataGridView1.Rows.Add();
             int n = dataGridView1.Rows.Count;
             int count;
             double price;
@@ -214,47 +189,67 @@ namespace Курсач
             total = total - count * price;
             label3.Text = total.ToString();
         }
+        private void add_button_Click(object sender, EventArgs e)
+        {
+            int n = dataGridView1.Rows.Add();
+            string s = listBox2.SelectedItem.ToString();
+            dataGridView1.Rows[n].Cells[0].Value = s;
+            dataGridView1.Rows[n].Cells[1].Value = textBox1.Text.ToString();
+            dataGridView1.Rows[n].Cells[2].Value = textBox2.Text.ToString();
+            getPrice();
+        }
 
+        private void edit_button_Click(object sender, EventArgs e)
+        {
+            deletePrice();
+            dataGridView1.SelectedRows[0].Cells[1].Value = textBox1.Text;
+            editPrice();
+        }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void delete_button_Click(object sender, EventArgs e)
+        {
+            deletePrice();
+            dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+        }
+
+        private void save_button_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
             dt.TableName = "Products";
             dt.Columns.Add("ProductName");
-            dt.Columns.Add("UnitsOnOrder");
-            dt.Columns.Add("PriceForSale");
+            dt.Columns.Add("UnitsInStock");
+            dt.Columns.Add("UnitPrice");
             ds.Tables.Add(dt);
 
             DataTable dt1 = new DataTable();
-            dt1.TableName = "Orders";
-            dt1.Columns.Add("ShipName");
-            dt1.Columns.Add("OrderDate");
-            dt1.Columns.Add("RequiredDate");
+            dt1.TableName = "Supplies";
+            dt1.Columns.Add("CompanyName");
+            dt1.Columns.Add("SupplyDate");
             dt1.Columns.Add("TotalPrice");
             ds.Tables.Add(dt1);
 
-            foreach (DataGridViewRow r in dataGridView1.Rows) {
+            foreach (DataGridViewRow r in dataGridView1.Rows)
+            {
                 DataRow row = ds.Tables["Products"].NewRow();
                 if (r.Cells[0].Value != null)
                 {
                     row["ProductName"] = r.Cells[0].Value.ToString();
-                    row["UnitsOnOrder"] = r.Cells[1].Value.ToString();
-                    row["PriceForSale"] = r.Cells[2].Value.ToString();
+                    row["UnitsInStock"] = r.Cells[1].Value.ToString();
+                    row["UnitPrice"] = r.Cells[2].Value.ToString();
                     ds.Tables["Products"].Rows.Add(row);
                 }
-                
+
             }
             foreach (DataGridViewRow r in dataGridView2.Rows)
             {
-                DataRow row = ds.Tables["Orders"].NewRow();
+                DataRow row = ds.Tables["Supplies"].NewRow();
                 if (r.Cells[0].Value != null)
                 {
-                    row["ShipName"] = r.Cells[0].Value.ToString();
-                    row["OrderDate"] = r.Cells[1].Value.ToString();
-                    row["RequiredDate"] = r.Cells[2].Value.ToString();
-                    row["TotalPrice"] = r.Cells[3].Value.ToString();
-                    ds.Tables["Orders"].Rows.Add(row);
+                    row["CompanyName"] = r.Cells[0].Value.ToString();
+                    row["SupplyDate"] = r.Cells[1].Value.ToString();
+                    row["TotalPrice"] = r.Cells[2].Value.ToString();
+                    ds.Tables["Supplies"].Rows.Add(row);
                 }
 
             }
@@ -270,28 +265,17 @@ namespace Курсач
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void back_button_Click(object sender, EventArgs e)
         {
-            deletePrice();
-            dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-           
+            this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            deletePrice();
-            dataGridView1.SelectedRows[0].Cells[1].Value = textBox1.Text;
-            editPrice();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
+        private void add_button1_Click(object sender, EventArgs e)
         {
             int n1 = dataGridView2.Rows.Add();
             dataGridView2.Rows[n1].Cells[0].Value = textBox3.Text;
             dataGridView2.Rows[n1].Cells[1].Value = DateTime.Now;
-            dataGridView2.Rows[n1].Cells[2].Value = DateTime.Now.AddDays(7);
-            dataGridView2.Rows[n1].Cells[3].Value = label3.Text;
-
+            dataGridView2.Rows[n1].Cells[2].Value = label3.Text;
         }
 
         private void close_button_Click(object sender, EventArgs e)

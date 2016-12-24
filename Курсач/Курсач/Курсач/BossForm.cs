@@ -16,19 +16,19 @@ namespace Курсач
         {
             InitializeComponent();
         }
-        public SaveForm _saveForm;
-        public StatisticForm _statForm;
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            LoginForm log = new LoginForm();
+            log.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            _saveForm = new SaveForm();
-            _saveForm.Owner = this;
-            _saveForm.ShowDialog();
+            BossSuppliesForm bos = new BossSuppliesForm();
+            bos.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -37,11 +37,15 @@ namespace Курсач
             sklad.ShowDialog();
         }
 
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            _statForm = new StatisticForm();
-            _statForm.Owner = this;
-            _statForm.ShowDialog();
+            StatisticForm statistic = new StatisticForm();
+            statistic.ShowDialog();
         }
     }
 }

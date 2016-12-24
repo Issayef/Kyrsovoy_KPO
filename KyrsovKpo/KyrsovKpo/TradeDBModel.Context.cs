@@ -25,15 +25,15 @@ namespace KyrsovKpo
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Employee> Employees { get; set; }
-        public virtual DbSet<Loginn> Loginns { get; set; }
-        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<Supplier> Suppliers { get; set; }
-        public virtual DbSet<Supply> Supplies { get; set; }
-        public virtual DbSet<SupplyDetail> SupplyDetails { get; set; }
+        public virtual DbSet<Categories> Categories { get; set; }
+        public virtual DbSet<Customers> Customers { get; set; }
+        public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<Loginn> Loginn { get; set; }
+        public virtual DbSet<OrderDetails> OrderDetails { get; set; }
+        public virtual DbSet<Orders> Orders { get; set; }
+        public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Suppliers> Suppliers { get; set; }
+        public virtual DbSet<Supply> Supply { get; set; }
+        public virtual DbSet<SupplyDetails> SupplyDetails { get; set; }
     }
 }

@@ -12,14 +12,13 @@ namespace KyrsovKpo
     using System;
     using System.Collections.Generic;
     
-    public partial class OrderDetail
+    public partial class SupplyDetails
     {
-        public int OrderID { get; set; }
+        public int SupplyID { get; set; }
         public string ProductName { get; set; }
-        public decimal UnitPrice { get; set; }
-        public short Quantity { get; set; }
+        public Nullable<decimal> UnitPrice { get; set; }
+        public Nullable<int> Quantity { get; set; }
     
-        public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual Supply Supply { get; set; }
     }
 }

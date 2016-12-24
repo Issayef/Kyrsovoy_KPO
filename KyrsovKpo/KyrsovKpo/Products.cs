@@ -12,12 +12,12 @@ namespace KyrsovKpo
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Products
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
+        public Products()
         {
-            this.OrderDetails = new HashSet<OrderDetail>();
+            this.OrderDetails = new HashSet<OrderDetails>();
         }
     
         public int ProductID { get; set; }
@@ -26,12 +26,13 @@ namespace KyrsovKpo
         public Nullable<int> CategoryID { get; set; }
         public string QuantityPerUnit { get; set; }
         public Nullable<decimal> UnitPrice { get; set; }
+        public Nullable<decimal> PriceForSale { get; set; }
         public Nullable<int> UnitsInStock { get; set; }
         public Nullable<int> UnitsOnOrder { get; set; }
     
-        public virtual Category Category { get; set; }
+        public virtual Categories Categories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
-        public virtual Supplier Supplier { get; set; }
+        public virtual ICollection<OrderDetails> OrderDetails { get; set; }
+        public virtual Suppliers Suppliers { get; set; }
     }
 }

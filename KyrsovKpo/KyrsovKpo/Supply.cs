@@ -18,9 +18,9 @@ namespace KyrsovKpo
         public string CompanyName { get; set; }
         public Nullable<int> SupplierID { get; set; }
         public Nullable<System.DateTime> SupplyDate { get; set; }
-        public string TotalPrice { get; set; }
+        public Nullable<decimal> TotalPrice { get; set; }
     
-        public virtual Supplier Supplier { get; set; }
-        public virtual SupplyDetail SupplyDetail { get; set; }
+        public virtual Suppliers Suppliers { get; set; }
+        public virtual SupplyDetails SupplyDetails { get; set; }
     }
 }

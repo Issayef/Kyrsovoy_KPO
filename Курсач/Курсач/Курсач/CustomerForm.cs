@@ -40,8 +40,9 @@ namespace Курсач
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             LoginForm login = new LoginForm();
+            login.Owner = this;
             login.ShowDialog();
             
         }
