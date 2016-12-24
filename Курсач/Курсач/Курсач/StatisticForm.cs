@@ -72,16 +72,37 @@ namespace Курсач
 
         public void OrderInfo()
         {
-            var query = from b in db.OrderDetails
-                        where b.OrderID == 10
-                        select b;
-            foreach (var item in query)
+            dataGridView2.Rows.Clear();
+            if (comboBox1.SelectedItem.ToString() == "Продажи")
             {
-                int n = dataGridView2.Rows.Add();
-                dataGridView2.Rows[n].Cells[0].Value = item.ProductName;
-                dataGridView2.Rows[n].Cells[1].Value = item.UnitPrice;
-                dataGridView2.Rows[n].Cells[2].Value = item.Quantity;
+                int SelOrderID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                var query = from b in db.OrderDetails
+                            where b.OrderID == SelOrderID
+                            select b;
+                foreach (var item in query)
+                {
+                    int n = dataGridView2.Rows.Add();
+                    dataGridView2.Rows[n].Cells[0].Value = item.ProductName;
+                    dataGridView2.Rows[n].Cells[1].Value = item.UnitPrice;
+                    dataGridView2.Rows[n].Cells[2].Value = item.Quantity;
+                }
             }
+            if (comboBox1.SelectedItem.ToString() == "Поставки")
+            {
+                int SelOrderID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                var query = from b in db.SupplyDetails
+                            where b.SupplyID == SelOrderID
+                            select b;
+                foreach (var item in query)
+                {
+                    int n = dataGridView2.Rows.Add();
+                    dataGridView2.Rows[n].Cells[0].Value = item.ProductName;
+                    dataGridView2.Rows[n].Cells[1].Value = item.UnitPrice;
+                    dataGridView2.Rows[n].Cells[2].Value = item.Quantity;
+                }
+            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,15 +111,15 @@ namespace Курсач
 
             if (radioButton3.Checked)
             {
-                // if (textBox1.Text != "" && textBox2.Text != "")
-                //   {
-                //   using (var db = new TradeDB())
-                //                {
+                if (textBox1.Text != "" && textBox2.Text != "")
+                {
+                    using (var db = new TradeDB())
+                    {
 
-                DateTime _fromDate = new DateTime(2009, 5, 28); //StringToDate(textBox1.Text);
-                DateTime _toDate = new DateTime(2020, 5, 28);//StringToDate(textBox2.Text);
+                        DateTime _fromDate = StringToDate(textBox1.Text);
+                        DateTime _toDate = StringToDate(textBox2.Text);
 
-                if (_fromDate < _toDate)
+                        if (_fromDate < _toDate)
                 {
 
                     if (comboBox1.SelectedItem.ToString() == "Продажи")
@@ -115,13 +136,13 @@ namespace Курсач
                 {
                     MessageBox.Show("Начальная дата не может быть больше конечной!");
                 }
-                //  }
+                    }
 
-                //   }
-                //else
-                //{
-                //    MessageBox.Show("Введите временные данные!");
-                //}    
+                }
+                else
+                {
+                    MessageBox.Show("Введите временные данные!");
+                }
             }
             if (radioButton1.Checked)
             {
