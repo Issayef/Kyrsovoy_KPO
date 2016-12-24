@@ -156,5 +156,10 @@ namespace Курсач
             LoginForm log = new LoginForm();
             log.ShowDialog();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

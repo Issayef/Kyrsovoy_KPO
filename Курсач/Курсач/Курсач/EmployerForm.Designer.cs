@@ -58,10 +58,11 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 36);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 122);
+            this.dataGridView1.Size = new System.Drawing.Size(459, 150);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -88,10 +89,11 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView2.Location = new System.Drawing.Point(362, 29);
+            this.dataGridView2.Location = new System.Drawing.Point(483, 36);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(439, 122);
+            this.dataGridView2.Size = new System.Drawing.Size(585, 150);
             this.dataGridView2.TabIndex = 3;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -117,81 +119,102 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.AliceBlue;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(807, 23);
+            this.button3.Size = new System.Drawing.Size(1076, 28);
             this.button3.TabIndex = 4;
             this.button3.Text = "Просмотреть заказы";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 200);
+            this.button4.BackColor = System.Drawing.Color.AliceBlue;
+            this.button4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(16, 241);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 23);
+            this.button4.Size = new System.Drawing.Size(152, 45);
             this.button4.TabIndex = 5;
             this.button4.Text = "Принять заказ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 228);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(442, 253);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(161, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Бюдже фирмы:";
+            this.label1.Text = "Бюджет фирмы:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 228);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(611, 253);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "label2";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // close_button
             // 
-            this.close_button.Location = new System.Drawing.Point(132, 244);
+            this.close_button.BackColor = System.Drawing.Color.GhostWhite;
+            this.close_button.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.close_button.Location = new System.Drawing.Point(176, 300);
+            this.close_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(130, 29);
+            this.close_button.Size = new System.Drawing.Size(255, 36);
             this.close_button.TabIndex = 8;
             this.close_button.Text = "Закрыть приложение";
-            this.close_button.UseVisualStyleBackColor = true;
+            this.close_button.UseVisualStyleBackColor = false;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(12, 244);
+            this.back_button.BackColor = System.Drawing.Color.GhostWhite;
+            this.back_button.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back_button.Location = new System.Drawing.Point(16, 300);
+            this.back_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(114, 29);
+            this.back_button.Size = new System.Drawing.Size(152, 36);
             this.back_button.TabIndex = 9;
             this.back_button.Text = "Назад";
-            this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.UseVisualStyleBackColor = false;
             this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // delete_button
             // 
-            this.delete_button.Location = new System.Drawing.Point(147, 200);
+            this.delete_button.BackColor = System.Drawing.Color.AliceBlue;
+            this.delete_button.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.delete_button.Location = new System.Drawing.Point(176, 241);
+            this.delete_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delete_button.Name = "delete_button";
-            this.delete_button.Size = new System.Drawing.Size(121, 23);
+            this.delete_button.Size = new System.Drawing.Size(192, 45);
             this.delete_button.TabIndex = 10;
             this.delete_button.Text = "Отклонить заказ";
-            this.delete_button.UseVisualStyleBackColor = true;
+            this.delete_button.UseVisualStyleBackColor = false;
             this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(207, 162);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(276, 199);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 13);
+            this.label3.Size = new System.Drawing.Size(303, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Количество товара на складе: ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -199,28 +222,34 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(377, 162);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(587, 199);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 12;
             this.label4.Text = "label4";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // count_button
             // 
-            this.count_button.Location = new System.Drawing.Point(12, 157);
+            this.count_button.BackColor = System.Drawing.Color.AliceBlue;
+            this.count_button.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.count_button.Location = new System.Drawing.Point(16, 193);
+            this.count_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.count_button.Name = "count_button";
-            this.count_button.Size = new System.Drawing.Size(189, 23);
+            this.count_button.Size = new System.Drawing.Size(252, 28);
             this.count_button.TabIndex = 13;
             this.count_button.Text = "Количество на складе";
-            this.count_button.UseVisualStyleBackColor = true;
+            this.count_button.UseVisualStyleBackColor = false;
             this.count_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // EmployerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 285);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1076, 351);
             this.Controls.Add(this.count_button);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -233,6 +262,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EmployerForm";
             this.Text = "EmployerForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

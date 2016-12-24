@@ -21,8 +21,8 @@ namespace Курсач
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection myCon = new SqlConnection();
-            myCon.ConnectionString = @"Data Source=.\SQLEXPRESS2014;Initial Catalog=TradeDB;Integrated Security=True";
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Loginn where UserName = '"+textBox1.Text+"'and Password = '"+textBox2.Text+"'", myCon);
+            myCon.ConnectionString = @"Data Source = tcp: 85.143.78.47; Initial Catalog = TradeDB; User ID = Pavel; Password = 12345";
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Loginn where UserName = '" + textBox1.Text + "'and Password = '" + textBox2.Text + "'", myCon);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
