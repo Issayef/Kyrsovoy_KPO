@@ -42,7 +42,7 @@
             this.button1.Location = new System.Drawing.Point(232, 336);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 48);
+            this.button1.Size = new System.Drawing.Size(209, 74);
             this.button1.TabIndex = 0;
             this.button1.Text = "Выйти из профиля";
             this.button1.UseVisualStyleBackColor = false;
@@ -79,7 +79,7 @@
             this.button4.BackColor = System.Drawing.Color.AliceBlue;
             this.button4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(137, 197);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(165, 54);
             this.button4.TabIndex = 3;
@@ -92,9 +92,9 @@
             this.close_button.BackColor = System.Drawing.Color.GhostWhite;
             this.close_button.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.close_button.Location = new System.Drawing.Point(3, 336);
-            this.close_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.close_button.Margin = new System.Windows.Forms.Padding(4);
             this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(207, 50);
+            this.close_button.Size = new System.Drawing.Size(207, 74);
             this.close_button.TabIndex = 4;
             this.close_button.Text = "Закрыть приложение";
             this.close_button.UseVisualStyleBackColor = false;
@@ -105,7 +105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(443, 395);
+            this.ClientSize = new System.Drawing.Size(453, 421);
             this.Controls.Add(this.close_button);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

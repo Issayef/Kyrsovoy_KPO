@@ -64,10 +64,10 @@
             // 
             this.back_button.BackColor = System.Drawing.Color.GhostWhite;
             this.back_button.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.back_button.Location = new System.Drawing.Point(12, 256);
+            this.back_button.Location = new System.Drawing.Point(12, 229);
             this.back_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(192, 44);
+            this.back_button.Size = new System.Drawing.Size(192, 71);
             this.back_button.TabIndex = 2;
             this.back_button.Text = "Выйти из профиля";
             this.back_button.UseVisualStyleBackColor = false;
@@ -77,10 +77,10 @@
             // 
             this.button4.BackColor = System.Drawing.Color.GhostWhite;
             this.button4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(211, 256);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(211, 229);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(215, 44);
+            this.button4.Size = new System.Drawing.Size(215, 71);
             this.button4.TabIndex = 3;
             this.button4.Text = "Закрыть приложение";
             this.button4.UseVisualStyleBackColor = false;

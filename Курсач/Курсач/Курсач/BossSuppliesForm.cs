@@ -30,7 +30,7 @@ namespace Курсач
             System.IO.Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = @"C:\Поставки";
+            openFileDialog1.InitialDirectory = @"E:\Поставки";
             openFileDialog1.Filter = "XML File(*.xml)|*.xml";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
@@ -81,7 +81,7 @@ namespace Курсач
             Company.withdrawal(totalprice);
             label2.Text = Company.Capital.ToString();
             string f2 = Company.Capital.ToString();
-            File.WriteAllText("C:\\Поставки\\company.txt", f2);
+            File.WriteAllText("E:\\company.txt", f2);
             int n = dataGridView1.Rows.Count;
             for (int i = 0; i < n; i++)
             {
