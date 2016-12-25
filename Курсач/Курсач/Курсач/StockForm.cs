@@ -20,7 +20,7 @@ namespace Курсач
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)  // выводи все товары выбранной категории
         {
             int Selected = listBox1.SelectedIndex;
             if (Selected == 0)
@@ -131,7 +131,7 @@ namespace Курсач
         }
 
         
-        void InitializeListBox()
+        void InitializeListBox()          // выводим все категории товаров
         {
             using (var db = new TradeDB())
             {
@@ -145,12 +145,12 @@ namespace Курсач
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)  // закрыть форму
         {
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // выйти из профиля, для повторной инициализвации пользователя
         {
             this.Hide();
             LoginForm log = new LoginForm();

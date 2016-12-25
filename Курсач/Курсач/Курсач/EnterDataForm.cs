@@ -26,7 +26,7 @@ namespace Курсач
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // сохранение данных о покупателе
         {
             string CompanyName = textBox1.Text;
             string ContactName = textBox2.Text;

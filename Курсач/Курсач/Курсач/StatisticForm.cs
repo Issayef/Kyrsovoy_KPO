@@ -19,13 +19,13 @@ namespace Курсач
             InitializeComponent();
             ChooseType();
         }
-        public void ChooseType()
+        public void ChooseType()   // выбор статистики которую мы хотим посмотреть(поставки/продажи)
         {
             comboBox1.Items.Clear();
             comboBox1.Items.Add("Продажи");
             comboBox1.Items.Add("Поставки");
         }
-        public void Sale(DateTime _fromDate, DateTime _toDate)
+        public void Sale(DateTime _fromDate, DateTime _toDate)   // вывод данных о продажах
         {
             var query = from b in db.Orders
                         where b.OrderDate > _fromDate && b.OrderDate < _toDate
@@ -40,7 +40,7 @@ namespace Курсач
             }
         }
 
-        public void Delivery(DateTime _fromDate, DateTime _toDate)
+        public void Delivery(DateTime _fromDate, DateTime _toDate)  // вывод данных о поставках
         {
             var query = from b in db.Supply
                         where b.SupplyDate > _fromDate && b.SupplyDate < _toDate
@@ -55,7 +55,7 @@ namespace Курсач
                 dataGridView1.Rows[n].Cells[3].Value = item.TotalPrice;
             }
         }
-        public void OrderInfo()
+        public void OrderInfo()     // вывод информации об отдельном заказе(продаже/поставке), включая информацию о наименовании товара, количестве и стоимости
         {
             dataGridView2.Rows.Clear();
             if (comboBox1.SelectedItem.ToString() == "Продажи")
@@ -88,7 +88,7 @@ namespace Курсач
             }
         }
 
-        public DateTime StringToDate(string str)
+        public DateTime StringToDate(string str)  // метод преобразования типа строки в формат DateTime
         {
             int[] date1 = new int[3];
             string[] split = str.Split('.');
@@ -106,9 +106,9 @@ namespace Курсач
         {
             dataGridView1.Rows.Clear();
 
-            if (radioButton3.Checked)
+            if (radioButton3.Checked)   // статистика за период который мы указали
             {
-                if (textBox1.Text != "" && textBox2.Text != "")
+                if (textBox1.Text != "" && textBox2.Text != "")  // проверка введены ли данные временного интервала
                 {
                     using (var db = new TradeDB())
                     {
@@ -116,7 +116,7 @@ namespace Курсач
                         DateTime _fromDate = StringToDate(textBox1.Text);
                         DateTime _toDate = StringToDate(textBox2.Text);
 
-                        if (_fromDate < _toDate)
+                        if (_fromDate < _toDate)      // проверка того, чтобы начальная дата не превышала конечную
                         {
 
                             if (comboBox1.SelectedItem.ToString() == "Продажи")
@@ -141,12 +141,12 @@ namespace Курсач
                     MessageBox.Show("Введите временные данные!");
                 }
             }
-            if (radioButton1.Checked)
+            if (radioButton1.Checked)    //статистика за последний месяц
             {
-                DateTime _fromDate = DateTime.Now.AddMonths(-1); ; //StringToDate(textBox1.Text);
-                DateTime _toDate = DateTime.Now;//StringToDate(textBox2.Text);
+                DateTime _fromDate = DateTime.Now.AddMonths(-1); ; 
+                DateTime _toDate = DateTime.Now;
 
-                if (_fromDate < _toDate)
+                if (_fromDate < _toDate)  // проверка того, чтобы начальная дата не превышала конечную
                 {
 
                     if (comboBox1.SelectedItem.ToString() == "Продажи")
@@ -160,12 +160,12 @@ namespace Курсач
                     }
                 }
             }
-            if (radioButton2.Checked)
+            if (radioButton2.Checked)     // статистика за последний год
             {
-                DateTime _fromDate = DateTime.Now.AddYears(-1); //StringToDate(textBox1.Text);
-                DateTime _toDate = DateTime.Now;//StringToDate(textBox2.Text);
+                DateTime _fromDate = DateTime.Now.AddYears(-1); 
+                DateTime _toDate = DateTime.Now;
 
-                if (_fromDate < _toDate)
+                if (_fromDate < _toDate)   // проверка того, чтобы начальная дата не превышала конечную
                 {
                     if (comboBox1.SelectedItem.ToString() == "Продажи")
                     {

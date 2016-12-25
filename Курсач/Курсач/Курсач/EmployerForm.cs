@@ -20,7 +20,7 @@ namespace Курсач
             label2.Text = Company.Capital.ToString();
         }
         string path;
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // открытие проводника для выбора имеющихся заказов
         {
             dataGridView1.Rows.Clear();
             dataGridView2.Rows.Clear();
@@ -74,7 +74,7 @@ namespace Курсач
             
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)  // принятие заказа
         {
             string companyname = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
             DateTime orderdate = Convert.ToDateTime(dataGridView2.SelectedRows[0].Cells[1].Value);
@@ -88,7 +88,7 @@ namespace Курсач
             int n = dataGridView1.Rows.Count;
             for (int i = 0;i< n;i++)
             {
-                if (dataGridView1.Rows[i].Cells[0].Value != null)
+                if (dataGridView1.Rows[i].Cells[0].Value != null) // проверка условия ненулевой строки
                 {
                     string prodName = dataGridView1.Rows[i].Cells[0].Value.ToString();
                     int units = Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value);
@@ -116,12 +116,12 @@ namespace Курсач
 
         }
 
-        private void close_button_Click(object sender, EventArgs e)
+        private void close_button_Click(object sender, EventArgs e) // закрыть приложение
         {
             Application.Exit();
         }
 
-        private void back_button_Click(object sender, EventArgs e)
+        private void back_button_Click(object sender, EventArgs e) // выйти из профиля для повторной инициализации пользователя
         {
             this.Hide();
             LoginForm login = new LoginForm();
@@ -129,14 +129,14 @@ namespace Курсач
 
         }
 
-        private void delete_button_Click(object sender, EventArgs e)
+        private void delete_button_Click(object sender, EventArgs e)  // удалить заказ
         {
             dataGridView1.Rows.Clear();
             dataGridView2.Rows.Clear();
             File.Delete(path);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)     // количество товара на складе
         {
             string s = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             using (var db = new TradeDB())

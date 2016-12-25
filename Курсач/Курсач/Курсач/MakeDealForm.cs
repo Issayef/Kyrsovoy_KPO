@@ -22,13 +22,13 @@ namespace Курсач
             
         }
         
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) // закрыть форму
         {
             
             this.Close();
             
         }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) // добавление всех товаров в listBox2, которые включены в выбранную категорию из listBox1
         {
             int Selected = listBox1.SelectedIndex;
             if (Selected == 0)
@@ -138,7 +138,7 @@ namespace Курсач
             }
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e) // при выборе другой категории товара, обновляется список товаров в listBox2
         {
             textBox1.Clear();
             string s = listBox2.SelectedItem.ToString();
@@ -154,7 +154,7 @@ namespace Курсач
                 }
             }    
         }
-        void InitializeListBox()
+        void InitializeListBox() // добавление категорий
         {
             using (var db = new TradeDB())
             {
@@ -169,7 +169,7 @@ namespace Курсач
         }
         public double total = 0;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // добавить товар
         {
             int n=dataGridView1.Rows.Add();
             string s= listBox2.SelectedItem.ToString();
@@ -181,9 +181,8 @@ namespace Курсач
         }
 
         
-        void getPrice()
+        void getPrice()     // расчет цены при добавлении товара в заказ
         {
-            //int n = dataGridView1.Rows.Add();
             int n = dataGridView1.Rows.Count;
             int count;
             double price;
@@ -192,9 +191,8 @@ namespace Курсач
             total = total + count * price;
             label3.Text = total.ToString();
         }
-        void editPrice()
+        void editPrice()   // перерасчет цены при изменении количества уже выбранного товара
         {
-            //int n = dataGridView1.Rows.Add();
             int n = dataGridView1.Rows.Count;
             int count;
             double price;
@@ -203,9 +201,8 @@ namespace Курсач
             total = total + count * price;
             label3.Text = total.ToString();
         }
-        void deletePrice()
+        void deletePrice()   // перерасчет стоимости заказа при удалении товара из заказа
         {
-            //int n = dataGridView1.Rows.Add();
             int n = dataGridView1.Rows.Count;
             int count;
             double price;
@@ -216,7 +213,7 @@ namespace Курсач
         }
 
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)  // сохранить заказ
         {
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
@@ -270,21 +267,21 @@ namespace Курсач
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)    // кнопка перерасчета стоимости заказа при удалении товара
         {
             deletePrice();
             dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)  // кнопка перерасчета стоимости заказа при изменении количества товара
         {
             deletePrice();
             dataGridView1.SelectedRows[0].Cells[1].Value = textBox1.Text;
             editPrice();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)  // вывод информации о заказе в dataGridView2
         {
             int n1 = dataGridView2.Rows.Add();
             dataGridView2.Rows[n1].Cells[0].Value = textBox3.Text;
@@ -294,7 +291,7 @@ namespace Курсач
 
         }
 
-        private void close_button_Click(object sender, EventArgs e)
+        private void close_button_Click(object sender, EventArgs e)  // закрыть приложение
         {
             Application.Exit();
         }

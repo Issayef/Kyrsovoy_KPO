@@ -18,7 +18,7 @@ namespace Курсач
         }
 
 
-        private void save_button_Click(object sender, EventArgs e)
+        private void save_button_Click(object sender, EventArgs e)  // сохранение данных о поставщике
         {
             string CompanyName = textBox1.Text;
             string ContactName = textBox2.Text;

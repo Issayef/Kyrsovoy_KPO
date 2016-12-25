@@ -21,25 +21,25 @@ namespace Курсач
         }
         string path;
 
-        private void open_button_Click(object sender, EventArgs e)
+        private void open_button_Click(object sender, EventArgs e)  // выбираем заранее сохраненный файл поставки и открываем его в приложении
         {
-            dataGridView1.Rows.Clear();
-            dataGridView2.Rows.Clear();
+            dataGridView1.Rows.Clear();   // очищаем dataGridView1 
+            dataGridView2.Rows.Clear();    //очищаем dataGridView1 
             DataSet ds = new DataSet();
 
             System.IO.Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = @"E:\Поставки";
+            openFileDialog1.InitialDirectory = @"C:\Поставки";
             openFileDialog1.Filter = "XML File(*.xml)|*.xml";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)  // если файл открылся, 
             {
                 try
                 {
-                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    if ((myStream = openFileDialog1.OpenFile()) != null)   // и он не является пустым, считываем
                     {
                         using (myStream)
                         {
@@ -55,14 +55,14 @@ namespace Курсач
                 }
 
 
-                foreach (DataRow item in ds.Tables["Products"].Rows)
+                foreach (DataRow item in ds.Tables["Products"].Rows) 
                 {
                     int n = dataGridView1.Rows.Add();
                     dataGridView1.Rows[n].Cells[0].Value = item["ProductName"].ToString();
                     dataGridView1.Rows[n].Cells[1].Value = item["UnitsInStock"];
                     dataGridView1.Rows[n].Cells[2].Value = item["UnitPrice"];
                 }
-                foreach (DataRow item in ds.Tables["Supplies"].Rows)
+                foreach (DataRow item in ds.Tables["Supplies"].Rows) 
                 {
                     int n = dataGridView2.Rows.Add();
                     dataGridView2.Rows[n].Cells[0].Value = item["CompanyName"].ToString();
@@ -72,7 +72,7 @@ namespace Курсач
             }
         }
 
-        private void accept_button_Click(object sender, EventArgs e)
+        private void accept_button_Click(object sender, EventArgs e)   // одобрить поставку
         {
             string companyname = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
             DateTime supplydate = Convert.ToDateTime(dataGridView2.SelectedRows[0].Cells[1].Value);
@@ -81,7 +81,7 @@ namespace Курсач
             Company.withdrawal(totalprice);
             label2.Text = Company.Capital.ToString();
             string f2 = Company.Capital.ToString();
-            File.WriteAllText("E:\\company.txt", f2);
+            File.WriteAllText("C:\\Поставки\\company.txt", f2);
             int n = dataGridView1.Rows.Count;
             for (int i = 0; i < n; i++)
             {
@@ -112,19 +112,19 @@ namespace Курсач
             File.Delete(path);
         }
 
-        private void delete_button_Click(object sender, EventArgs e)
+        private void delete_button_Click(object sender, EventArgs e) // удалить поставку
         {
             dataGridView1.Rows.Clear();
             dataGridView2.Rows.Clear();
             File.Delete(path);
         }
 
-        private void close_button_Click(object sender, EventArgs e)
+        private void close_button_Click(object sender, EventArgs e)  // выйти из приложения
         {
             Application.Exit();
         }
 
-        private void back_button_Click(object sender, EventArgs e)
+        private void back_button_Click(object sender, EventArgs e) // закрыть форму
         {
             this.Close();
         }

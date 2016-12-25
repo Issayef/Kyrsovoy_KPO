@@ -18,7 +18,7 @@ namespace Курсач
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // кнопка авторизации
         {
             SqlConnection myCon = new SqlConnection();
             myCon.ConnectionString = @"Data Source = tcp: 85.143.78.47; Initial Catalog = TradeDB; User ID = Pavel; Password = 12345";
@@ -118,7 +118,7 @@ namespace Курсач
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // закрыть приложение
         {
             Application.Exit();
         }

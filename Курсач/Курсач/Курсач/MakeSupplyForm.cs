@@ -21,7 +21,7 @@ namespace Курсач
             listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
         }
         public double total = 0;
-        void InitializeListBox()
+        void InitializeListBox()   //Добавление категории товара в ListBox1
         {
             using (var db = new TradeDB())
             {
@@ -34,10 +34,10 @@ namespace Курсач
 
             }
         }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) //Добавление товаров в выбранной категории
         {
-            int Selected = listBox1.SelectedIndex;
-            if (Selected == 0)
+            int Selected = listBox1.SelectedIndex; // переменная для выбранного товара в listBox1
+            if (Selected == 0) // выводит в listBox2 все товары из категории[0] выбранный в listBox1
             {
                 listBox2.Items.Clear();
                 using (var db = new TradeDB())
@@ -144,7 +144,7 @@ namespace Курсач
             }
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)  //Цена за единицу товара
         {
             textBox1.Clear();
             string s = listBox2.SelectedItem.ToString();
@@ -159,7 +159,7 @@ namespace Курсач
                 }
             }
         }
-        void getPrice()
+        void getPrice()         // метод расчета цены при добавлении товара
         {
             int n = dataGridView1.Rows.Count;
             int count;
@@ -169,7 +169,7 @@ namespace Курсач
             total = total + count * price;
             label3.Text = total.ToString();
         }
-        void editPrice()
+        void editPrice()   // метод расчета цены при изменении количества товара
         {
             int n = dataGridView1.Rows.Count;
             int count;
@@ -179,7 +179,7 @@ namespace Курсач
             total = total + count * price;
             label3.Text = total.ToString();
         }
-        void deletePrice()
+        void deletePrice()     // метод расчета цены при удалении товара
         {
             int n = dataGridView1.Rows.Count;
             int count;
@@ -189,7 +189,7 @@ namespace Курсач
             total = total - count * price;
             label3.Text = total.ToString();
         }
-        private void add_button_Click(object sender, EventArgs e)
+        private void add_button_Click(object sender, EventArgs e)   // добавить товар к заказу
         {
             int n = dataGridView1.Rows.Add();
             string s = listBox2.SelectedItem.ToString();
@@ -199,20 +199,20 @@ namespace Курсач
             getPrice();
         }
 
-        private void edit_button_Click(object sender, EventArgs e)
+        private void edit_button_Click(object sender, EventArgs e)   // изменение количества товара
         {
             deletePrice();
             dataGridView1.SelectedRows[0].Cells[1].Value = textBox1.Text;
             editPrice();
         }
 
-        private void delete_button_Click(object sender, EventArgs e)
+        private void delete_button_Click(object sender, EventArgs e)   // удалить выбранный товар из заказа
         {
             deletePrice();
             dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
         }
 
-        private void save_button_Click(object sender, EventArgs e)
+        private void save_button_Click(object sender, EventArgs e) // сохранить поставку
         {
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
@@ -265,12 +265,12 @@ namespace Курсач
             }
         }
 
-        private void back_button_Click(object sender, EventArgs e)
+        private void back_button_Click(object sender, EventArgs e)  // закрыть форму
         {
             this.Close();
         }
 
-        private void add_button1_Click(object sender, EventArgs e)
+        private void add_button1_Click(object sender, EventArgs e)   // добавляет данные о поставке в dataGridView2
         {
             int n1 = dataGridView2.Rows.Add();
             dataGridView2.Rows[n1].Cells[0].Value = textBox3.Text;
@@ -278,7 +278,7 @@ namespace Курсач
             dataGridView2.Rows[n1].Cells[2].Value = label3.Text;
         }
 
-        private void close_button_Click(object sender, EventArgs e)
+        private void close_button_Click(object sender, EventArgs e) // закрыть приложение
         {
             Application.Exit();
         }
