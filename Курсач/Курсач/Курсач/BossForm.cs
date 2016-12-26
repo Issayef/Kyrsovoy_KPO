@@ -47,5 +47,11 @@ namespace Курсач
             StatisticForm statistic = new StatisticForm();
             statistic.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CatalogForm catalog = new CatalogForm();
+            catalog.ShowDialog();
+        }
     }
 }

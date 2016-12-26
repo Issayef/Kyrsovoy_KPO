@@ -18,3 +18,13 @@ C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\Entit
 C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.csprojResolveAssemblyReference.cache
 C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.exe
 C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.pdb
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.exe.config
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.exe
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\KyrsovKpo.pdb
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.dll
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.SqlServer.dll
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.xml
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\bin\Debug\EntityFramework.SqlServer.xml
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.csprojResolveAssemblyReference.cache
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.exe
+E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\obj\Debug\KyrsovKpo.pdb

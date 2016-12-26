@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatalogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForm.Designer.cs">
+      <DependentUpon>CatalogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enterdata.cs" />
     <Compile Include="BossForm.cs">
       <SubType>Form</SubType>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BossSuppliesForm.resx">
       <DependentUpon>BossSuppliesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForm.resx">
+      <DependentUpon>CatalogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>

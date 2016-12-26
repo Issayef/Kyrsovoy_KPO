@@ -94,3 +94,30 @@ C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курс�
 C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.StockForm.resources
 C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.SupplierForm.resources
 C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe.config
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.exe
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.pdb
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\Курсач.exe
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\Курсач.pdb
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.dll
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.SqlServer.dll
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\KyrsovKpo.exe
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\KyrsovKpo.pdb
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.xml
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\bin\Debug\EntityFramework.SqlServer.xml
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.BossForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.BossSuppliesForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.CatalogForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.CustomerForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.EmployerForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.EnterDataForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.EnterDataSupplierForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.LoginForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.MakeDealForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.MakeSupplyForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.StatisticForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.StockForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.SupplierForm.resources
+E:\Program Files\GitHub\Kyrsovoy_KPO\Курсач\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache

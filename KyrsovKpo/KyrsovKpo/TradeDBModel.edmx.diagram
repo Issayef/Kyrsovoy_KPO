@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="60464d3de6f64d15b64c7efcbb0fe568" Name="Diagram1">
-        <EntityTypeShape EntityType="TradeDBModel.Categories" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.Customers" Width="1.5" PointX="0.5" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.Employees" Width="1.5" PointX="0.5" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.Loginn" Width="1.5" PointX="5.5" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.OrderDetails" Width="1.5" PointX="5" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.Orders" Width="1.5" PointX="2.75" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.Products" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.Suppliers" Width="1.5" PointX="0.5" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.Supply" Width="1.5" PointX="2.75" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeDBModel.SupplyDetails" Width="1.5" PointX="5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.Categories" Width="1.5" PointX="4.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.Customers" Width="1.5" PointX="5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.Employees" Width="1.5" PointX="7.125" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.Loginn" Width="1.5" PointX="8.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.OrderDetails" Width="1.5" PointX="4.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.Orders" Width="1.5" PointX="6.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.Products" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.Suppliers" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.Supply" Width="1.5" PointX="0.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeDBModel.SupplyDetails" Width="1.5" PointX="2.25" PointY="5.125" IsExpanded="true" />
         <AssociationConnector Association="TradeDBModel.FK_Products_Categories" ManuallyRouted="false" />
         <AssociationConnector Association="TradeDBModel.FK_Orders_Customers" ManuallyRouted="false" />
         <AssociationConnector Association="TradeDBModel.FK_Orders_Employees" ManuallyRouted="false" />

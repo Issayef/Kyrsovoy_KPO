@@ -147,14 +147,12 @@ namespace Курсач
 
         private void button1_Click(object sender, EventArgs e)  // закрыть форму
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e) // выйти из профиля, для повторной инициализвации пользователя
         {
-            this.Hide();
-            LoginForm log = new LoginForm();
-            log.ShowDialog();
+            this.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)

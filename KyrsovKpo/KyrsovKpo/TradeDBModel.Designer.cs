@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\noize\Documents\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\TradeDBModel.edmx" включено. 
+﻿// Создание кода T4 для модели "E:\Program Files\GitHub\Kyrsovoy_KPO\KyrsovKpo\KyrsovKpo\TradeDBModel.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.
